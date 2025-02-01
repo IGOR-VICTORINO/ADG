@@ -1,0 +1,333 @@
+body {
+  background: linear-gradient(to   bottom, rgb(171, 110, 164) 0%, #5000b9b8 50%);
+  text-align: center;
+  align-items: center;
+}
+
+.navbar {
+  border-bottom: 1px solid rgb(207, 207, 207);
+  padding: 0px;
+  background-color: #EFEAF6;
+
+
+  & .container-fluid {
+    text-align: center;
+    align-items:center;
+    width: 80%;
+
+    & .navbar-toggler {}
+
+    & .d-inline-block {
+      width: 60px;
+      height: 60px;
+    }
+
+    & .container-navbaritem {
+
+      display: flex;
+      justify-content: space-evenly;
+
+      & .item {
+        color: black;
+        font-weight: 600;
+        font-size: 20px;
+        list-style: none;
+        border-bottom: 1px solid transparent;
+
+
+
+        &:hover {
+          transition: 1s;
+          color: rgb(179, 60, 184);
+          cursor: pointer;
+        }
+
+        &:before{
+          color: aqua;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.btnNav {
+  color: white;
+  border-radius: 10px;
+  padding: 4px 10px 4px 10px;
+  background-color: #9b45e1;
+  font-weight: 600;
+  font-size: 20px;
+  list-style: none;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #8158b6;
+    cursor: pointer;
+  }
+
+
+}
+
+
+
+
+
+.rodape {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #EFEAF6;
+  color: rgb(92, 19, 99);
+  text-align: center;
+  padding: 20px 10px 20px 10px;
+
+  & .boxlogo {
+    width: 25%;
+  }
+
+
+  & .rodLogo {
+    height: 150px;
+    width: 180px;
+    padding: 10px;
+  }
+
+  & .boxList {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+
+    & .itemlistTTl {
+      list-style: none;
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+    & .list {
+      list-style: none;
+
+      & .itemlist {
+        color: gray;
+        font-size: 20px;
+
+        &:hover {
+          cursor: pointer;
+          color: rgb(92, 19, 99);
+          font-weight: 900;
+        }
+      }
+
+
+    }
+  }
+
+
+}
+
+
+
+.redesSociais {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 25%;
+  height: 110px;
+
+
+  & .boxRede {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  & .redesocial {
+    background-image: url(../imgs/iconeInstaBlack.png);
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+
+    &:hover {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      background-image: url(../imgs/instaicone.png);
+      background-size: 100%;
+    }
+  }
+
+  & .redesocial2 {
+    background-image: url(../imgs/iconewhatsBlack.png);
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+
+    &:hover {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      background-image: url(../imgs/iconewhats.png);
+      background-size: 100%;
+    }
+  }
+
+  & .redesocial3 {
+    background-image: url(../imgs/iconeFaceblack.png);
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+
+    &:hover {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      background-image: url(../imgs/faceIcone.png);
+      background-size: 100%;
+    }
+  }
+}
+
+
+.iconePerfil{
+  width: 40px;
+}
+
+
+
+
+
+
+
+
+/* Estilos gerais para o rodapé */
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+  flex-wrap: wrap;
+}
+
+.boxlogo {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rodLogo {
+  width: 150px;
+}
+
+.boxList {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+}
+
+.list {
+  flex: 1 1 30%;
+  padding: 10px;
+}
+
+.itemlistTTl {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.itemlist {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.redesSociais {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 100%;
+}
+
+.cardRodape {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.cardRodape a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Largura ajustada para tornar os ícones mais proporcionais */
+  height: 50px; /* Altura ajustada */
+  border-radius: 50%;
+  background-color: #333;
+  margin: 5px;
+}
+
+.cardRodape a svg {
+  width: 30px; /* Ajusta o tamanho do ícone */
+  height: 30px; /* Ajusta o tamanho do ícone */
+  fill: white;
+}
+
+/* Hover effects */
+.cardRodape a:hover {
+  transform: scale(1.1); /* Adiciona um efeito de zoom suave ao passar o mouse */
+}
+
+@media screen and (max-width: 768px) {
+  .rodape {
+    flex-direction: column;
+    align-items: center; /* Alinha todos os itens ao centro */
+  }
+
+  .boxlogo {
+    text-align: center; /* Garante que a logo fique centralizada */
+    margin-bottom: 20px;
+    width: 100%; /* Garante que a logo ocupe a largura inteira */
+  }
+
+  .rodLogo {
+    width: 120px; /* Ajuste no tamanho da logo */
+  }
+
+  .boxList {
+    flex-direction: column;
+    align-items: center; /* Alinha as listas ao centro */
+    width: 100%; /* Garante que a lista ocupe a largura inteira */
+  }
+
+  .list {
+    width: 100%;
+    text-align: center; /* Garante que os itens da lista fiquem centralizados */
+  }
+
+  .cardRodape {
+    flex-direction: column;
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .cardRodape a {
+    width: 60px; /* Ajuste para dar mais espaço aos ícones em telas pequenas */
+    height: 60px;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rodLogo {
+    width: 120px;
+  }
+
+  .cardRodape a svg {
+    width: 40px;
+    height: 40px;
+  }
+}

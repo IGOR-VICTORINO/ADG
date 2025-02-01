@@ -1,0 +1,410 @@
+body {
+    background-color: white;
+    height: 100vh;
+}
+
+.container-navbaritem {
+    align-items: center;
+    display: flex;
+    text-align: right;
+    margin-left: 200px;
+    padding-left: 500px;
+}
+
+.ContainerRelatos {
+    width: 100%;
+    height: 1000px;
+
+}
+
+.navRelatos {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 100px;
+
+    & .bandeira {
+        width: 20%;
+    }
+}
+
+
+.bannerPerfil {
+    height: 400px;
+}
+
+
+.container-perfil {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.perfil {
+    overflow: hidden;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin-left: 2vw;
+    margin-top: 10vh;
+    width: 28vw;
+    height: 90vh;
+    border: 2px solid white;
+    position: absolute;
+    background-color: #6e33a8b6;
+    border-radius: 20px 20px 0px 0px;
+
+    .foto-perfil {
+        border-radius: 100%;
+        width: 38%;
+        height: 19vh;
+        margin-bottom: 30px;
+    }
+
+    .text_perfil {
+        color: white;
+        margin-bottom: 40px;
+    }
+
+}
+
+.scroll-div {
+    margin-left: 30vw;
+    width: 70vw;
+    height: 50%;
+    /* Altura externa da div */
+    overflow-y: auto;
+    /* Ativa o scroll vertical */
+    overflow-x: hidden;
+    padding: 10px;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth;
+    /* Rola suavemente */
+}
+
+/* Estilo do conteúdo */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanhos iguais */
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-items: center; /* Centraliza os itens na horizontal */
+    align-items: start; /* Alinha os itens no topo (pode ser alterado para 'center' se quiser centralizar verticalmente) */
+    margin: 0 auto; /* Centraliza a grid na página */
+    max-width: 1200px; /* Define a largura máxima da grid para não esticar muito em telas grandes */
+}
+/* Estilo do scrollbar (apenas no WebKit, que inclui Chrome, Safari, Edge) */
+.scroll-div::-webkit-scrollbar {
+    width: 10px;
+    /* Largura da barra de rolagem */
+}
+
+/* Fundo da barra de rolagem */
+.scroll-div::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    /* Cor do fundo */
+}
+
+/* Cor da barra de rolagem */
+.scroll-div::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Cor da barra */
+    border-radius: 5px;
+    /* Bordas arredondadas para um visual suave */
+    border: 2px solid #f0f0f0;
+    /* Espaço entre a barra e o fundo */
+}
+
+/* Cor da barra de rolagem ao passar o mouse */
+.scroll-div::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Cor da barra ao passar o mouse */
+}
+
+.btn-perfil {
+    width: 60%;
+    font-size: 17px;
+    padding: 1em 2.7em;
+    font-weight: 500;
+    background-color: #9b45e1;
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 0.6em;
+    margin-top: -0.25em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.3));
+}
+
+.label {
+    font-weight: 900;
+    font-size: 1.4em;
+
+    position: relative;
+    top: -1px;
+}
+
+.transition {
+    color: black;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    background-color: #ffffff;
+    border-radius: 9999px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button:hover {
+    .transition {
+    width: 100%;
+    height: 14em;
+    }
+    &.btn-perfil {
+        .label {
+            color: #9b45e1;
+        }
+    }
+}
+    button:active {
+        transform: scale(0.97);
+    }
+
+   
+.cardRelato {
+    position: relative;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+}
+
+.superiorCard {
+    align-items: center;
+    text-align: center;
+    margin-left: 1%;
+    width: 98%;
+    height: 5em;
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.imgCard {
+    border: 1px solid black;
+    width: 23%;
+    height: 5em;
+    border-radius: 100px;
+}
+
+.nomeCard {
+    font-size: 2em;
+    margin-right: 10px;
+    color: rgb(77, 76, 76);
+}
+
+.dataCard {
+    font-size: 1.8em;
+    color: rgb(58, 58, 58);
+}
+
+
+.textCard {
+    margin-left: 3%; /* Margem à esquerda */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: rgb(226, 226, 226); /* Cor de fundo */
+    font-weight: 700; /* Texto em negrito */
+    width: 94%; /* Largura do elemento */
+    padding: 1em; /* Espaçamento interno */
+    resize: none; /* Impede o redimensionamento */
+    overflow-y: auto; /* Adiciona scroll vertical quando necessário */
+    overflow-x: hidden; /* Remove o scroll horizontal */
+    overflow-wrap: break-word; /* Permite quebra de palavras */
+    white-space: pre-wrap; /* Mantém espaços e quebra linhas automaticamente */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+    font-size: 1em; /* Tamanho da fonte */
+    height: 250px; /* Altura fixa */
+    border: 1px solid #ccc; /* Borda leve */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: #333; /* Cor do texto */
+    transition: all 0.3s ease-in-out; /* Animação suave para foco */
+    scrollbar-color: #7b1fa2 rgba(0, 0, 0, 0.1); /* Cor do thumb e trilha no Firefox */
+    scrollbar-width: thin; /* Scroll mais fino no Firefox */
+}
+
+.textCard:focus {
+    border-color: #7b1fa2; /* Borda roxa ao focar */
+    box-shadow: 0 0 8px rgba(123, 31, 162, 0.5); /* Destaque roxo ao focar */
+    outline: none; /* Remove borda padrão ao focar */
+}
+
+/* Estilo do scroll para navegadores WebKit */
+.textCard::-webkit-scrollbar {
+    cursor: pointer;
+    width: 8px; /* Largura do scroll */
+}
+
+.textCard::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #7b1fa2; /* Cor do scroll */
+    border-radius: 10px; /* Arredondamento do scroll */
+}
+
+.textCard::-webkit-scrollbar-thumb:hover {
+    cursor:all-scroll;
+    background: #9c27b0; /* Cor do scroll ao passar o mouse */
+}
+
+.textCard::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Cor da trilha */
+    border-radius: 10px; /* Arredondamento da trilha */
+}
+
+
+
+  .newImagme{
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 100%;
+  }
+
+
+  .deleteButton {
+ 
+    background-color: red; /* Cor de fundo vermelha */
+    color: white; /* Cor do texto branca */
+    border: none;
+    padding: 5px 10px; /* Espaçamento interno (paddings) para o botão */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais forte */
+    cursor: pointer; /* Cursor de mão para indicar que é clicável */
+    border-radius: 50%; /* Tornando o botão arredondado */
+    width: 30px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombra para o botão */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave para efeitos de hover */
+  }
+  
+  .deleteButton:hover {
+    background-color: darkred; /* Muda para um vermelho mais escuro quando passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão ligeiramente ao passar o mouse */
+  }
+  
+  .deleteButton:focus {
+    outline: none; /* Remove o contorno padrão ao clicar */
+  }
+
+  .upload-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilização do formulário */
+.form-container {
+    color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #9b45e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Títulos de cada campo */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Botões */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 48%;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  /* Estilização para o input */
+  .form-control {
+    border-radius: 5px;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Mensagens de ajuda */
+  .form-text {
+    font-size: 0.875rem;
+    color: #ffffff;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 576px) {
+    .form-container {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+  
